@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <title>Puja's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e8fe8d8915.js" crossorigin="anonymous"></script>
+    <script src="smooth-scroll.js"></script>
+    </head>
+<body>
+    <!--Home Section-->
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="head-col-1" id = "header-img">
+                    <img src="img/user1.jpeg" class="profile-img">
+                </div>
+                <div class="head-col-2" id="header-text">
+                        <h1>Hi, I'm <span>Puja Roy</span></h1>
+                        <p>Cyber Security Analyst <span>&</span> IAM Developer</p>
+                        <a href="#about" class="btn-link"><button type="button" class="know-button"><i class="fa fa-chevron-down" aria-hidden="true"></i> Know More</button></a>
+                        <a href="#contact" class="btn-link"><button type="button" class="know-button"><i class="fa-solid fa-globe"></i> Contact Me</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--About Section-->
+    <div id="about">
+        <div class="container">
+            <div class="about-row">
+                <div class="about-col-1">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit a, ea harum repudiandae quisquam beatae minus magnam sapiente dolore, necessitatibus similique quas? Doloremque porro ab possimus beatae? Minus, quam aliquam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit a, ea harum repudiandae quisquam beatae minus magnam sapiente dolore, necessitatibus similique quas? Doloremque porro ab possimus beatae? Minus, quam aliquam!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <!--Experience-->
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li><span>Cyber Security Analyst </span>(February 2021 - Present)<br>Organization: Tata Consultancy Services<br><br><span class="description-text">Primarily worked on NetIQ IDM and NetIQ Access Manager. Have good amount of experience in SSO integrations both, OAuth and SAML. Also worked on drivers and workflows in NetIQ.</span> </li>
+                        </ul>
+                    </div>
+
+                    <!--Skills-->
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>NetIQ IDM</span><br></li>
+                            <li><span>NetIQ Access Manager</span><br></li>
+                            <li><span>Java</span><br></li>
+                            <li><span>MySql</span><br></li>
+                        </ul>
+                    </div>
+
+                    <!--Education-->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bachelor of Technology </span>(2016-2020)<br>College Name</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#about" class="btn-link"><button type="button" class="know-button download-resume"> <i class="fa fa-download" aria-hidden="true"></i>Download Resume</button></a>
+                <a href="#contact" class="btn-link"><button type="button" class="know-button"><i class="fa-solid fa-globe"></i> Contact Me</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact Section-->
+    <div id="contact">
+        <div class="container">
+            <div class="contact-row">
+                <div class="contact-center">
+                    <h1 class="subtitle">Connect With Me</h1>
+                    <ul>
+                        <li><span class="fa-stack fa-2x">
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fa-solid fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                            puja.personal2398@gmail.com
+                        </li>
+                        <li><span class="fa-stack fa-2x">
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fa-solid fa-phone fa-stack-1x fa-inverse"></i>
+                            </span>
+                            +91-xxxxxxxxxx
+                        </li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+</body>
+</html>
